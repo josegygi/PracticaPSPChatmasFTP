@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+
+<BorderPane prefHeight="700.0" prefWidth="600.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controladores.ControladorFTP">
+   <center>
+      <GridPane BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="62.0" minHeight="0.0" prefHeight="39.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="106.0" minHeight="0.0" prefHeight="35.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="623.0" minHeight="10.0" prefHeight="526.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="87.0" minHeight="0.0" prefHeight="49.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="49.0" minHeight="0.0" prefHeight="49.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="ls" text="Servidor FTP: ?">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin></Label>
+            <Label fx:id="lu" text="Usuario: ?" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin></Label>
+            <Label fx:id="ldr" text="Directorio Raiz: ?" GridPane.columnSpan="2" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin></Label>
+            <JFXListView fx:id="lv" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </JFXListView>
+            <Label fx:id="ld" text="Directorio: ?" GridPane.columnSpan="2" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="lda" text="Directorio Actual: ?" GridPane.columnSpan="2" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Label>
+            <GridPane GridPane.columnIndex="1" GridPane.rowIndex="2">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <JFXButton fx:id="btnsf" buttonType="RAISED" mnemonicParsing="false" text="Subir Fichero" GridPane.halignment="CENTER">
+                     <ripplerFill>
+                        <LinearGradient cycleMethod="REFLECT" endX="0.9" endY="0.8380952380952381" startX="0.30952380952380953" startY="0.1619047619047619">
+                           <stops>
+                              <Stop color="#376cab" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </ripplerFill></JFXButton>
+                  <JFXButton fx:id="btndf" buttonType="RAISED" mnemonicParsing="false" text="Descargar Fichero" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                     <ripplerFill>
+                        <LinearGradient cycleMethod="REFLECT" endX="0.9" endY="0.8380952380952381" startX="0.30952380952380953" startY="0.1619047619047619">
+                           <stops>
+                              <Stop color="#376cab" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </ripplerFill></JFXButton>
+                  <JFXButton fx:id="btnef" buttonType="RAISED" mnemonicParsing="false" text="Eliminar Fichero" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                     <ripplerFill>
+                        <LinearGradient cycleMethod="REFLECT" endX="0.9" endY="0.8380952380952381" startX="0.30952380952380953" startY="0.1619047619047619">
+                           <stops>
+                              <Stop color="#376cab" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </ripplerFill></JFXButton>
+                  <JFXButton fx:id="btncc" buttonType="RAISED" mnemonicParsing="false" text="Crear Carpeta" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                     <ripplerFill>
+                        <LinearGradient cycleMethod="REFLECT" endX="0.9" endY="0.8380952380952381" startX="0.30952380952380953" startY="0.1619047619047619">
+                           <stops>
+                              <Stop color="#376cab" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </ripplerFill></JFXButton>
+                  <JFXButton fx:id="btnbc" buttonType="RAISED" mnemonicParsing="false" text="Borrar Carpeta" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+                     <ripplerFill>
+                        <LinearGradient cycleMethod="REFLECT" endX="0.9" endY="0.8380952380952381" startX="0.30952380952380953" startY="0.1619047619047619">
+                           <stops>
+                              <Stop color="#376cab" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </ripplerFill></JFXButton>
+                  <JFXButton fx:id="btns" buttonType="RAISED" mnemonicParsing="false" text="Salir" GridPane.halignment="CENTER" GridPane.rowIndex="6">
+                     <ripplerFill>
+                        <LinearGradient cycleMethod="REFLECT" endX="0.9" endY="0.8380952380952381" startX="0.30952380952380953" startY="0.1619047619047619">
+                           <stops>
+                              <Stop color="#376cab" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </ripplerFill></JFXButton>
+                  <JFXButton fx:id="btnmf" buttonType="RAISED" mnemonicParsing="false" text="Mandar Fichero" GridPane.halignment="CENTER" GridPane.rowIndex="5">
+                     <ripplerFill>
+                        <LinearGradient cycleMethod="REFLECT" endX="0.9" endY="0.8380952380952381" startX="0.30952380952380953" startY="0.1619047619047619">
+                           <stops>
+                              <Stop color="#376cab" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </ripplerFill></JFXButton>
+               </children>
+            </GridPane>
+         </children>
+      </GridPane>
+   </center>
+</BorderPane>
